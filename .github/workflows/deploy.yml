@@ -19,10 +19,10 @@ jobs:
             node-version: 20
             
       - name: Install vercle cli
-        run: npm install --global vercel
+        run: npm install --global vercel pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Run Prisma migrations
         env:
