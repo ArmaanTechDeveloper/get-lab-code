@@ -20,3 +20,9 @@ model Snippets{
   title     String   
   snippet   String
 }
+
+model Paths{
+  id        Int     @id @default(autoincrement())
+  path      String
+  view      Boolean @default(false)
+}
