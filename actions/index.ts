@@ -2,6 +2,8 @@
 
 import prisma from "@/db";
 
+export const runtime = "nodejs";
+
 const createNewPath = async (path: string) => {
     const newpath = await prisma.paths.create({
         data:{
