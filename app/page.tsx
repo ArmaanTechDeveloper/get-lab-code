@@ -21,7 +21,7 @@ import { createNewPath, getAllPath } from "@/actions";
 export default function Home() {
 
   const [inputpath, setinputpath] = useState("");
-  const [previouspaths, setpreviouspaths] = useState<{ id: Number, path: String }[]>([]);
+  const [previouspaths, setpreviouspaths] = useState<{ path: String }[]>([]);
 
   const getpaths = async () => {
     const response = await getAllPath();
@@ -52,7 +52,7 @@ export default function Home() {
             <AlertDialogHeader>
               <AlertDialogTitle className="text-2xl">Enter new folder path</AlertDialogTitle>
               <AlertDialogDescription>
-                <Input type="text" placeholder="/something-something" value={inputpath} onChange={(e) => setinputpath(e.target.value)} />
+                <Input type="text" placeholder="something-something" value={inputpath} onChange={(e) => setinputpath(e.target.value)} />
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
@@ -68,7 +68,7 @@ export default function Home() {
 
           <div className="flex flex-col text-2xl text-blue-400">
 
-            {previouspaths.map((temp) => <a href={`${temp.path}`} key={`${temp.id}`} className="inline-block border-2 p-3 border-black my-2">{temp.path}</a>)}
+            {previouspaths.map((temp) => <a href={`${temp.path}`} key={`${temp.path}`} className="inline-block border-2 p-3 border-black my-2">{temp.path}</a>)}
           </div>
         </div>
       </div>

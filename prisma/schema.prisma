@@ -19,10 +19,13 @@ model Snippets{
   id        Int      @id  @default(autoincrement())
   title     String   
   snippet   String
+  slug      String
+  slugrel   Paths   @relation(fields: [slug] , references: [path])
 }
 
 model Paths{
-  id        Int     @id @default(autoincrement())
-  path      String
+  path      String  @unique   @id
   view      Boolean @default(false)
+  code      Snippets[]
+  createdAt DateTime @default(now())
 }
