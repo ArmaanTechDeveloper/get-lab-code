@@ -104,3 +104,5 @@ export default function Folder() {
         </div>
     )
 }
+
+export const dynamic = "force-dynamic";
