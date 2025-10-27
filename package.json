@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prebuild": "pnpm prisma generate && pnpm build"
   },
   "dependencies": {
     "@prisma/client": "6.17.1",
