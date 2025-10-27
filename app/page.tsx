@@ -75,4 +75,6 @@ export default function Home() {
     </div>
   );
 }
-export const revalidate = 20;
+//export const revalidate = 20;
+
+export const dynamic = "force-dynamic";
