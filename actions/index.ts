@@ -1,6 +1,7 @@
 'use server'
 
-import prisma from "@/db";
+import { prisma } from "@/db";
+
 
 const createNewPath = async (path: string) => {
     const newpath = await prisma.paths.create({
